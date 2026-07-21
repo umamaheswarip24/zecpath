@@ -12,21 +12,18 @@
     <title>ZecPath API Demo</title>
 
     <style>
-        /* Remove default spacing */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* Page style */
         body {
             font-family: Arial, sans-serif;
             background-color: #f8fafc;
             color: #1e293b;
         }
 
-        /* Header */
         .header {
             padding: 30px 20px;
             background-color: #5b5fef;
@@ -38,14 +35,12 @@
             margin-bottom: 8px;
         }
 
-        /* Main section */
         .container {
             max-width: 1100px;
             margin: auto;
             padding: 50px 20px;
         }
 
-        /* Button */
         .fetch-button {
             display: block;
             margin: 0 auto 30px;
@@ -67,7 +62,6 @@
             background-color: #464ad6;
         }
 
-        /* Loader */
         .loader {
             display: none;
             text-align: center;
@@ -77,7 +71,6 @@
             margin-bottom: 25px;
         }
 
-        /* Error message */
         .error-message {
             color: red;
             text-align: center;
@@ -94,7 +87,6 @@
             gap: 20px;
         }
 
-        /* Single user card */
         .user-card {
             padding: 24px;
 
@@ -118,7 +110,6 @@
             margin-bottom: 7px;
         }
 
-        /* Mobile screen */
         @media screen and (max-width: 480px) {
             .header h1 {
                 font-size: 26px;
@@ -133,14 +124,12 @@
 
 <body>
 
-    <!-- Header -->
     <header class="header">
         <h1>ZecPath API Demo</h1>
 
         <p>Fetch and display users using JavaScript</p>
     </header>
 
-    <!-- Main content -->
     <main class="container">
 
         <button
@@ -150,7 +139,6 @@
             Load Users
         </button>
 
-        <!-- Loader -->
         <p class="loader" id="loader">
             Loading users...
         </p>
@@ -161,7 +149,6 @@
             id="errorMessage"
         ></p>
 
-        <!-- User cards will appear here -->
         <section
             class="user-container"
             id="userContainer"
@@ -170,7 +157,6 @@
     </main>
 
     <script>
-        // Select HTML elements
         const fetchButton =
             document.getElementById("fetchButton");
 
@@ -184,16 +170,12 @@
             document.getElementById("userContainer");
 
 
-        // Function to get users from API
         const getUsers = async () => {
 
-            // Show loader
             loader.style.display = "block";
 
-            // Remove old error message
             errorMessage.textContent = "";
 
-            // Remove old user cards
             userContainer.innerHTML = "";
 
             try {
@@ -202,15 +184,12 @@
                     "https://jsonplaceholder.typicode.com/users"
                 );
 
-                // Check whether the response is successful
                 if (response.ok === false) {
                     throw new Error("Unable to fetch users");
                 }
 
-                // Convert response into JavaScript data
                 const users = await response.json();
 
-                // Display every user
                 users.forEach((user) => {
 
                     // Destructuring
@@ -221,13 +200,11 @@
                         company
                     } = user;
 
-                    // Create a card
                     const userCard =
                         document.createElement("article");
 
                     userCard.className = "user-card";
 
-                    // Add user information
                     userCard.innerHTML = `
                         <h2>${name}</h2>
                         <p><strong>Email:</strong> ${email}</p>
@@ -238,13 +215,11 @@
                         </p>
                     `;
 
-                    // Add card to the page
                     userContainer.appendChild(userCard);
                 });
 
             } catch (error) {
 
-                // Show error
                 errorMessage.textContent =
                     "Something went wrong. Please try again.";
 
@@ -252,13 +227,11 @@
 
             } finally {
 
-                // Hide loader
                 loader.style.display = "none";
             }
         };
 
 
-        // Run function when button is clicked
         fetchButton.addEventListener("click", getUsers);
     </script>
 
