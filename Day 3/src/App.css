@@ -1,4 +1,145 @@
+.login-section {
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eef2ff;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-heading {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.login-heading h1 {
+    margin-bottom: 8px;
+    color: #1e293b;
+    font-size: 32px;
+}
+
+.login-heading p {
+    color: #64748b;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1e293b;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 7px;
+    font-size: 15px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #5b5fef;
+}
+
+.password-box {
+    position: relative;
+}
+
+.password-box input {
+    padding-right: 70px;
+}
+
+.show-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    border: none;
+    background: none;
+    color: #5b5fef;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.login-button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background-color: #5b5fef;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #464ad6;
+}
+
+.error-message {
+    margin-bottom: 18px;
+    padding: 11px;
+    border-radius: 6px;
+    background-color: #fee2e2;
+    color: #b91c1c;
+    text-align: center;
+}
+
+.success-message {
+    margin-bottom: 18px;
+    padding: 11px;
+    border-radius: 6px;
+    background-color: #dcfce7;
+    color: #15803d;
+    text-align: center;
+}
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        padding: 25px 20px;
+    }
+
+    .login-heading h1 {
+        font-size: 27px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Navbar */
+
 
 .navbar {
     padding: 18px 8%;
