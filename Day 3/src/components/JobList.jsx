@@ -1,44 +1,38 @@
 import { useEffect, useState } from "react";
+import getJobs from "../services/jobService";
 import JobCard from "./JobCard";
+import { REFRESH_TIME } from "../constants/constants";
 
 function JobList() {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  async function getJobs() {
-    try {
-      setLoading(true);
+  async function loadJobs() {
+  try {
+    setLoading(true);
 
-      const response = await fetch(
-        "https://www.arbeitnow.com/api/job-board-api"
-      );
+    const data = await getJobs();
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch jobs");
-      }
+    setJobs(data);
+    setError("");
 
-      const result = await response.json();
+  } catch (error) {
+    setError("Unable to load jobs.");
 
-      setJobs(result.data.slice(0, 6));
-      setError("");
-
-    } catch (error) {
-      setError("Unable to load jobs.");
-
-    } finally {
-      setLoading(false);
-    }
+  } finally {
+    setLoading(false);
   }
+}
 
   useEffect(() => {
     // Fetch jobs when the page loads
-    getJobs();
+    loadJobs();
 
     // Refresh jobs every 30 seconds
     const interval = setInterval(() => {
-      getJobs();
-    }, 30000);
+      loadJobs();
+    }, REFRESH_TIME);
 
     // Stop interval when component is removed
     return () => {
@@ -64,7 +58,7 @@ function JobList() {
 
         <p>{error}</p>
 
-        <button onClick={getJobs}>
+        <button onClick={loadJobs}>
           Try Again
         </button>
       </div>
