@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import getJobs from "../services/jobService";
 import JobCard from "./JobCard";
 import { REFRESH_TIME } from "../constants/constants";
+import SearchBar from "./SearchBar";
 
 function JobList() {
   const [jobs, setJobs] = useState([]);
@@ -69,6 +70,15 @@ function JobList() {
   return (
     <section className="job-list" id="jobs">
       <h1>Available Jobs</h1>
+      <section className="job-list" id="jobs">
+  <h1>Available Jobs</h1>
+
+  <SearchBar />
+
+  <div className="job-container">
+    {/* Job cards */}
+  </div>
+</section>
 
       <div className="job-container">
         {jobs.map((job) => (

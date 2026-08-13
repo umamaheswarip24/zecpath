@@ -1,42 +1,63 @@
-# zecpath
+# ZecPath
 
+ZecPath is a beginner-friendly React job listing application created as part of my React learning and development tasks.
 
+## Project Description
 
+The project demonstrates the basic concepts of React development, including reusable components, props, state management, event handling, API integration, useEffect, and project architecture. It also demonstrates basic Git and GitHub workflow practices using feature branches and pull requests.
 
-# ZecPath – Day 3 React Setup
+## Features
 
-This project was created for my MERN Stack Internship Day 3 task.
+- Home page with navigation
+- Reusable Navbar and Footer
+- Reusable Button and Card components
+- Login form with validation
+- Show and hide password
+- Dynamic job listing
+- Job cards with company, experience, and salary
+- Search bar component
+- Jobs fetched from a public API
+- Loading state
+- Error handling
+- Retry option
+- Automatic job data refresh
+- Organized services and constants
+- Environment variable configuration
 
 ## Technologies Used
 
 - React
 - JavaScript
+- JSX
+- CSS
 - Vite
-- Node.js
-- npm
-- Git and GitHub
+- Git
+- GitHub
 
-## Folder Structure
+## Project Structure
 
-- `components` – Reusable components
-- `pages` – Application pages
-- `services` – API-related files
-- `assets` – Images and static files
-
-## Run the Project
-
-Install dependencies:
-
-`npm install`
-
-Start the development server:
-
-`npm run dev`
-
-## Completed Tasks
-
-- Created React project
-- Configured Vite
-- Created the required folders
-- Tested the development server
-- Added the project to GitHub
+```text
+src/
+├── components/
+│   ├── Button.jsx
+│   ├── Card.jsx
+│   ├── Footer.jsx
+│   ├── JobCard.jsx
+│   ├── JobList.jsx
+│   ├── LoginForm.jsx
+│   ├── Navbar.jsx
+│   └── SearchBar.jsx
+│
+├── constants/
+│   └── constants.js
+│
+├── data/
+│   └── jobs.js
+│
+├── services/
+│   └── jobService.js
+│
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
