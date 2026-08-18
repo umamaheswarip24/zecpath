@@ -1,16 +1,29 @@
-# React + Vite
+# Zecpath - Job Listing Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Zecpath is a beginner-friendly job listing application built during my React internship. It fetches real job data from a public API and displays it in a responsive, modern UI.
 
-Currently, two official plugins are available:
+## Features
+- Dynamic job listings fetched from a public API
+- Loading and error states for better user experience
+- Responsive design (Grid layout for desktop, vertical stack for mobile)
+- Reusable UI components (Navbar, Hero, JobCard, Footer, etc.)
+- Clean architecture separating API services from UI components
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies Used
+- JavaScript (ES6+)
+- React (Functional Components & Hooks)
+- Vite
+- CSS
+- Arbeitnow Job Board API
 
-## React Compiler
+## Project Architecture
+The project follows a clean separation of concerns:
+- `src/components/`: Contains all reusable UI components.
+- `src/services/`: Contains API fetching logic (`jobService.js`).
+- `src/constants/`: Contains configurable values (`constants.js`).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Running Locally
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/umamaheswarip24/zecpath.git](https://github.com/umamaheswarip24/zecpath.git)
