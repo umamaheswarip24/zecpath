@@ -1,42 +1,25 @@
-# zecpath
+# Zecpath Mini Job Listing Application
 
+## Overview
+This is a responsive React application built for the Day 10 Mini Review Project. It fetches and displays real-time job listings using the Arbeitnow API.
 
+## Live Demo
+[Insert your Vercel Link Here]
 
-
-# ZecPath – Day 3 React Setup
-
-This project was created for my MERN Stack Internship Day 3 task.
+## Features
+- Dynamic job list fetched via API integration
+- Responsive grid layout for desktop and mobile
+- Custom Hero section and navigation components
+- Clean architecture and component structure
 
 ## Technologies Used
+- React (Vite)
+- JavaScript (ES6+)
+- CSS
+- Vercel (Deployment)
 
-- React
-- JavaScript
-- Vite
-- Node.js
-- npm
-- Git and GitHub
-
-## Folder Structure
-
-- `components` – Reusable components
-- `pages` – Application pages
-- `services` – API-related files
-- `assets` – Images and static files
-
-## Run the Project
-
-Install dependencies:
-
-`npm install`
-
-Start the development server:
-
-`npm run dev`
-
-## Completed Tasks
-
-- Created React project
-- Configured Vite
-- Created the required folders
-- Tested the development server
-- Added the project to GitHub
+## How to Run Locally
+1. Clone the repository
+2. Run `npm install` to install dependencies
+3. Create a `.env` file and add: `VITE_JOB_API_URL=https://www.arbeitnow.com/api/job-board-api`
+4. Run `npm run dev` to start the local server
