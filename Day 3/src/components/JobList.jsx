@@ -68,7 +68,7 @@ function JobList() {
   // Job list
   return (
     <section className="job-list" id="jobs">
-      <h1>Available Jobs</h1>
+      
 
       <div className="job-container">
         {jobs.map((job) => (
