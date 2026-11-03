@@ -65,7 +65,7 @@ export default function CandidateProfile() {
       {isEditing ? (
         <form
           onSubmit={handleSave}
-          className="space-y-6 rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
+          className="space-y-6 rounded-xl border border-gray-200 bg-white p-6 shadow"
         >
           <h2 className="text-xl font-bold text-gray-900">Edit Profile Information</h2>
           <div className="grid gap-4 md:grid-cols-2">
@@ -81,7 +81,7 @@ export default function CandidateProfile() {
               rows={4}
               value={profile.bio}
               onChange={handleChange}
-              className="mt-1 w-full rounded-md border border-gray-300 p-2 text-sm shadow-sm focus:border-blue-500 focus:outline-none"
+              className="mt-1 w-full rounded-md border border-gray-300 p-2 text-sm shadow focus:border-blue-500 focus:outline-none"
             />
           </div>
 
@@ -100,7 +100,7 @@ export default function CandidateProfile() {
                     handleAddSkill();
                   }
                 }}
-                className="flex-1 rounded-md border border-gray-300 px-3 py-1.5 text-sm shadow-sm focus:border-blue-500 focus:outline-none"
+                className="flex-1 rounded-md border border-gray-300 px-3 py-1.5 text-sm shadow focus:border-blue-500 focus:outline-none"
               />
               <Button type="button" variant="primary" onClick={handleAddSkill}>
                 Add Skill
@@ -143,12 +143,12 @@ export default function CandidateProfile() {
         </form>
       ) : (
         <div className="space-y-6">
-          <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="rounded-xl border border-gray-200 bg-white p-6 shadow">
             <h3 className="text-lg font-bold text-gray-900">About Me</h3>
             <p className="mt-2 text-sm text-gray-600 leading-relaxed">{profile.bio}</p>
           </div>
 
-          <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+          <div className="rounded-xl border border-gray-200 bg-white p-6 shadow">
             <h3 className="text-lg font-bold text-gray-900">Skills</h3>
             <div className="mt-3 flex flex-wrap gap-2">
               {profile.skills.map((skill) => (

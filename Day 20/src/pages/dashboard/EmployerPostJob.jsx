@@ -45,7 +45,7 @@ export default function EmployerPostJob() {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="mt-6 space-y-6 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+      <form onSubmit={handleSubmit} className="mt-6 space-y-6 rounded-xl border border-gray-200 bg-white p-6 shadow">
         <div className="grid gap-6 md:grid-cols-2">
           <Input label="Job Title" name="title" value={formData.title} onChange={handleChange} placeholder="e.g. Senior Frontend Engineer" required />
           <Input label="Company Name" name="company" value={formData.company} onChange={handleChange} placeholder="e.g. TechCorp" required />

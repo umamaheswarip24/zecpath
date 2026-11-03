@@ -47,7 +47,7 @@ export default function CandidateApplications() {
       </p>
 
       {/* Added overflow-x-auto to make the table scrollable on small screens */}
-      <div className="mt-6 w-full overflow-x-auto rounded-xl border border-gray-200 bg-white shadow-sm">
+      <div className="mt-6 w-full overflow-x-auto rounded-xl border border-gray-200 bg-white shadow">
         <table className="min-w-full divide-y divide-gray-200 text-left">
           <thead className="bg-gray-50">
             <tr>

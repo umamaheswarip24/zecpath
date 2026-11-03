@@ -2,7 +2,7 @@ import Button from "./ui/Button";
 
 export default function JobCard({ job, onApply }) {
   return (
-    <div className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md">
+    <div className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow transition-shadow hover:shadow-md">
       <div>
         <div className="flex items-start justify-between">
           <h3 className="text-lg font-bold text-gray-900">{job.title}</h3>

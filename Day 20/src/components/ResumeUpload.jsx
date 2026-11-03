@@ -24,7 +24,7 @@ export default function ResumeUpload({ onUpload }) {
   };
 
   return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+    <div className="rounded-xl border border-gray-200 bg-white p-6 shadow">
       <h3 className="text-lg font-bold text-gray-900">Resume / CV</h3>
       <p className="mt-1 text-sm text-gray-600">Upload your latest resume (PDF or DOCX)</p>
 

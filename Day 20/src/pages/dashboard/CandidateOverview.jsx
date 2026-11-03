@@ -16,7 +16,7 @@ export default function CandidateOverview() {
         {stats.map((item) => (
           <div
             key={item.label}
-            className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm"
+            className="rounded-xl border border-gray-200 bg-white p-6 shadow"
           >
             <p className="text-sm font-medium text-gray-500">{item.label}</p>
             <p className="mt-2 text-3xl font-bold text-gray-900">{item.value}</p>

@@ -22,8 +22,8 @@ export default function JobFeed() {
   };
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-12">
-      <div className="mb-8">
+      <div className="mx-auto max-w-7xl px-4 py-12">
+        <div className="mb-8">
         <h1 className="text-3xl font-bold text-gray-900">Explore Job Openings</h1>
         <p className="mt-1 text-gray-600">
           Find your next career opportunity with top companies.
@@ -31,7 +31,7 @@ export default function JobFeed() {
       </div>
 
       {/* Search & Filter Bar */}
-      <div className="mb-8 grid gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow-sm md:grid-cols-3">
+      <div className="mb-8 grid gap-4 rounded-xl border border-gray-200 bg-white p-6 shadow md:grid-cols-3">
         <div className="md:col-span-2">
           <Input
             label="Search Jobs"

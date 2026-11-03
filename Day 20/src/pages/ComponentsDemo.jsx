@@ -18,7 +18,7 @@ export default function ComponentsDemo() {
   };
 
   return (
-    <div className="mx-auto max-w-5xl px-4 py-12">
+    <div className="mx-auto max-w-7xl px-4 py-12">
       <div className="mb-10 text-center">
         <h1 className="text-3xl font-bold text-gray-900">UI Component Library</h1>
         <p className="text-gray-600">Day 15 Reusable Design System Showcase</p>
@@ -37,7 +37,7 @@ export default function ComponentsDemo() {
 
       <div className="grid gap-8 md:grid-cols-2">
         {/* Buttons */}
-        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow">
           <h2 className="mb-4 text-xl font-bold text-gray-800">1. Buttons</h2>
           <div className="flex flex-wrap gap-3">
             <Button variant="primary">Primary</Button>
@@ -48,7 +48,7 @@ export default function ComponentsDemo() {
         </section>
 
         {/* Form Inputs & Select */}
-        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow">
           <h2 className="mb-4 text-xl font-bold text-gray-800">2. Inputs & Select</h2>
           <div className="space-y-4">
             <Input label="Standard Input" placeholder="Type here..." />
@@ -65,7 +65,7 @@ export default function ComponentsDemo() {
         </section>
 
         {/* Loaders */}
-        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow">
           <h2 className="mb-4 text-xl font-bold text-gray-800">3. Loaders</h2>
           <div className="flex items-center justify-around py-4">
             <Loader size="sm" text="Small" />
@@ -75,7 +75,7 @@ export default function ComponentsDemo() {
         </section>
 
         {/* Modal & Toast Triggers */}
-        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
+        <section className="rounded-xl border border-gray-200 bg-white p-6 shadow">
           <h2 className="mb-4 text-xl font-bold text-gray-800">4. Interactive Feedback</h2>
           <div className="space-y-4">
             <div className="flex flex-wrap gap-2">

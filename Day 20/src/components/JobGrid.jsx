@@ -18,7 +18,7 @@ export default function JobGrid() {
       {/* Responsive CSS Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {jobs.map((job) => (
-          <div key={job.id} className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md">
+          <div key={job.id} className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 shadow transition-all hover:-translate-y-1 hover:shadow-md">
             <div>
               <h3 className="mb-1 text-lg font-bold text-gray-900">{job.title}</h3>
               <p className="mb-4 text-sm text-gray-500">{job.company} &bull; {job.location}</p>
