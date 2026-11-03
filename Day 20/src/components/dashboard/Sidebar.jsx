@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 export default function Sidebar({ role }) {
   const candidateLinks = [
@@ -20,10 +20,12 @@ export default function Sidebar({ role }) {
     <aside className="flex flex-col border-r border-gray-200 bg-white w-36 md:w-64 transition-all duration-300 shrink-0">
       {/* Brand Header */}
       <div className="flex h-16 items-center border-b border-gray-200 px-4 md:px-6">
-        <span className="text-base md:text-xl font-bold tracking-tight text-gray-900 truncate">
-          Zecpath
+        <span className="text-base md:text-xl font-bold tracking-tight text-blue-600 truncate">
+          Zecpath Jobs
         </span>
       </div>
+
+      
 
       {/* Role Indicator */}
       <div className="px-4 md:px-6 py-3">
@@ -32,16 +34,23 @@ export default function Sidebar({ role }) {
         </p>
       </div>
 
-      {/* Text-Only Navigation Links */}
+      {/* Navigation Links with Active State Highlighting */}
       <nav className="flex-1 space-y-1 px-3 md:px-4 py-2">
         {links.map((link) => (
-          <Link
+          <NavLink
             key={link.name}
             to={link.path}
-            className="block rounded-lg px-3 py-2.5 text-xs md:text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+            end={link.path === "/dashboard"}
+            className={({ isActive }) =>
+              `block rounded-lg px-3 py-2.5 text-xs md:text-sm font-medium transition-colors ${
+                isActive
+                  ? "bg-blue-50 text-blue-600 font-semibold"
+                  : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+              }`
+            }
           >
             <span className="truncate">{link.name}</span>
-          </Link>
+          </NavLink>
         ))}
       </nav>
 

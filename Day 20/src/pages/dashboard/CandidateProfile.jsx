@@ -132,6 +132,13 @@ export default function CandidateProfile() {
             <Button type="submit" variant="primary">
               Save Changes
             </Button>
+
+            <Button
+  variant="outline"
+  onClick={() => setIsEditing(!isEditing)}
+>
+  {isEditing ? "Cancel" : "Edit Profile"}
+</Button>
           </div>
         </form>
       ) : (
