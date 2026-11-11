@@ -21,7 +21,7 @@ export default function ComponentsDemo() {
     <div className="mx-auto max-w-7xl px-4 py-12">
       <div className="mb-10 text-center">
         <h1 className="text-3xl font-bold text-gray-900">UI Component Library</h1>
-        <p className="text-gray-600">Day 15 Reusable Design System Showcase</p>
+        <p className="text-gray-600">Standardized Reusable Design System Showcase</p>
       </div>
 
       {/* Floating Toast Area */}
